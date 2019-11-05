@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import Filtro.*;
 
-public abstract class Territorio implements Comparable<Territorio>{
+public abstract class Territorio {
 	private String name;
 	
 	public Territorio(String n){
@@ -17,7 +17,7 @@ public abstract class Territorio implements Comparable<Territorio>{
 	
 	public abstract int getTotalIngresos();
 	
-	public abstract ArrayList<Territorio> getColonias(Filtro f);
+	public abstract ArrayList<Comarca> getColonias(Filtro f);
 	
 	public int ingresosPCapita(){
 		return this.getTotalIngresos()/this.totalHabitantes();
@@ -35,8 +35,8 @@ public abstract class Territorio implements Comparable<Territorio>{
 		this.name = name;
 	}
 	
-	@Override
+	/*@Override
 	public int compareTo(Territorio t) {
 		return t.getName().compareTo(this.getName());
-	}
+	}*/
 }

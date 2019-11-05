@@ -40,13 +40,11 @@ public class Region extends Territorio{
 		return aux;
 	}
 
-	public ArrayList<Territorio> getColonias(Filtro f){
-		ArrayList<Territorio> aux = new ArrayList<Territorio>();
+	public ArrayList<Comarca> getColonias(Filtro f){
+		ArrayList<Comarca> aux = new ArrayList<>();
 		
 		for (int i = 0; i < this.territorios.size(); i++) {
-			if (this.territorios.get(i)!=null) {
-				aux.addAll(this.getColonias(f));
-			}
+				aux.addAll(this.territorios.get(i).getColonias(f));
 		}
 		Collections.sort(aux);
 		return aux;
