@@ -2,10 +2,10 @@ package Filtro;
 
 import territorio.*;
 
-public class FiltroAnd implements Filtro{
-	private FiltroAnd f1, f2;
+public class FiltroAnd implements Filtro{//filtro o filtroAnd???
+	private Filtro f1, f2;
 	
-	public FiltroAnd(FiltroAnd f1, FiltroAnd f2){
+	public FiltroAnd(Filtro f1, Filtro f2){
 		this.f1 = f1;
 		this.f2 = f2;
 	}
