@@ -34,9 +34,5 @@ public abstract class Territorio {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	/*@Override
-	public int compareTo(Territorio t) {
-		return t.getName().compareTo(this.getName());
-	}*/
+
 }

@@ -14,7 +14,7 @@ public class Comarca extends Territorio implements Comparable<Comarca> {
 		this.totalIngresos = ti;
 	}
 	
-	public ArrayList<Comarca> getColonias(Filtro f){ // debe devolver comarcas no territorios
+	public ArrayList<Comarca> getColonias(Filtro f){ 
 		ArrayList<Comarca> aux = new ArrayList<>();
 		if (f.eval(this)) {
 			aux.add(this);
@@ -22,7 +22,7 @@ public class Comarca extends Territorio implements Comparable<Comarca> {
 		return aux;
 	}
 
-@Override
+	@Override
 	public int compareTo(Comarca c) {
 		return c.getName().compareTo(this.getName());
 	}
